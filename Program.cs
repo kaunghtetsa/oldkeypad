@@ -1,74 +1,86 @@
-﻿using System.Linq;
-using System.Text;
+﻿using System.Text;
 
 public class OldPhoneTyping
 {
     public static void Main(string[] args)
     {
-        OldPhonePad("33#"); //=> output: E 
-        OldPhonePad("227*#"); //=> output: B 
-        OldPhonePad("4433555 555666#"); //=> output: HELLO 
-        OldPhonePad("8 88777444666*664#"); //=> output: ????
+        OldPhonePad("33#");                // Output: E
+        OldPhonePad("227*#");              // Output: B
+        OldPhonePad("4433555 555666#");    // Output: HELLO
+        OldPhonePad("8 88777444666*664#"); // Output: TURING
+        OldPhonePad("222 2 22#");          // Output: CAB
+        OldPhonePad("2#");                 // Output: A
+        OldPhonePad("22#");                // Output: B
+        OldPhonePad("222#");               // Output: C
+        OldPhonePad("22222#");             // Output: Invalid input
     }
-    static readonly string[] keypadChars = new string[]
+
+    private static readonly string[] keypadChars = new string[]
     {
         "",
         "&'(",
-        "ABC", 
-        "DEF", 
-        "GHI", 
-        "JKL", 
-        "MNO", 
-        "PQRS", 
-        "TUV", 
-        "WXYZ" 
-
+        "ABC",
+        "DEF",
+        "GHI",
+        "JKL",
+        "MNO",
+        "PQRS",
+        "TUV",
+        "WXYZ"
     };
-    static void OldPhonePad(string input)
+
+    private static void OldPhonePad(string input)
     {
         try
         {
-            if (!string.IsNullOrEmpty(input) && input.EndsWith("#") && input.Length > 1)
+            if (string.IsNullOrEmpty(input) || !input.EndsWith("#"))
             {
-                StringBuilder result = new StringBuilder();
-                StringBuilder temp = new StringBuilder();
-                input=input.Remove(input.Length - 1, 1);
-                temp.Append(input.ElementAt(0));
-                    
-                for (int i = 0; i < input.Length-1; i++)
+                Console.WriteLine("Invalid input.");
+            }
+
+            StringBuilder result = new StringBuilder();
+            StringBuilder temp = new StringBuilder();
+            input = input.Remove(input.Length - 1); // Remove char '#' at the end
+
+            for (int i = 0; i < input.Length; i++)
+            {
+                if (input[i] == '*')
                 {
-                    if (i == input.Length - 2)
+                    if (result.Length > 0)
                     {
-                        result.Append(keypadChars[int.Parse(temp[0].ToString())][temp.Length]);
-                        continue;
+                        result.Remove(result.Length - 1, 1); // Remove last char(backspace) find by *
                     }
-                    if (input[i] == '*')
-                    {
-                        if (result.Length > 0)
-                        {
-                            result.Remove(result.Length - 1, 1); // Remove the last character
-                        }
-                        continue;
-                    }
-                    if (input[i] == input[i+1] && input[i+1]!=' ')
-                    {
-                        temp.Append(input[i + 1]);
-                    }
-                    else
-                    {
-                        result.Append(keypadChars[int.Parse(temp[0].ToString())][temp.Length]);
-                        i++;
-                        temp.Clear();
-                    }
-                   
+                    continue;
                 }
 
-                Console.WriteLine(result); return;
+                if (input[i] == ' ')
+                {
+                    if (temp.Length > 0)
+                    {
+                        result.Append(keypadChars[int.Parse(temp[0].ToString())][temp.Length - 1]);
+                        temp.Clear();
+                    }
+                    continue;
+                }
+
+                if (i < input.Length - 1 && input[i] == input[i + 1])
+                {
+                    temp.Append(input[i]);
+                }
+                else
+                {
+                    temp.Append(input[i]);
+                    result.Append(keypadChars[int.Parse(temp[0].ToString())][temp.Length - 1]);
+                    temp.Clear();
+                }
             }
+
+            Console.WriteLine(result.ToString());
         }
-        catch { }
-        Console.WriteLine("Invalid input.");
 
-
+        catch
+        {
+            Console.WriteLine("Invalid input.");
+        }
     }
 }
