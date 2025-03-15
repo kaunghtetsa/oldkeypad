@@ -36,6 +36,7 @@ public class OldPhoneTyping
             if (string.IsNullOrEmpty(input) || !input.EndsWith("#"))
             {
                 Console.WriteLine("Invalid input.");
+                return;
             }
 
             StringBuilder result = new StringBuilder();
