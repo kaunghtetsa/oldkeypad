@@ -1,0 +1,15 @@
+D:\KHS\LogicTest\IronSoftwareCodeChallenge\IronSoftwareCodeChallenge\bin\Debug\net8.0\IronSoftwareCodeChallenge.exe
+D:\KHS\LogicTest\IronSoftwareCodeChallenge\IronSoftwareCodeChallenge\bin\Debug\net8.0\IronSoftwareCodeChallenge.deps.json
+D:\KHS\LogicTest\IronSoftwareCodeChallenge\IronSoftwareCodeChallenge\bin\Debug\net8.0\IronSoftwareCodeChallenge.runtimeconfig.json
+D:\KHS\LogicTest\IronSoftwareCodeChallenge\IronSoftwareCodeChallenge\bin\Debug\net8.0\IronSoftwareCodeChallenge.dll
+D:\KHS\LogicTest\IronSoftwareCodeChallenge\IronSoftwareCodeChallenge\bin\Debug\net8.0\IronSoftwareCodeChallenge.pdb
+D:\KHS\LogicTest\IronSoftwareCodeChallenge\IronSoftwareCodeChallenge\obj\Debug\net8.0\IronSoftwareCodeChallenge.GeneratedMSBuildEditorConfig.editorconfig
+D:\KHS\LogicTest\IronSoftwareCodeChallenge\IronSoftwareCodeChallenge\obj\Debug\net8.0\IronSoftwareCodeChallenge.AssemblyInfoInputs.cache
+D:\KHS\LogicTest\IronSoftwareCodeChallenge\IronSoftwareCodeChallenge\obj\Debug\net8.0\IronSoftwareCodeChallenge.AssemblyInfo.cs
+D:\KHS\LogicTest\IronSoftwareCodeChallenge\IronSoftwareCodeChallenge\obj\Debug\net8.0\IronSoftwareCodeChallenge.csproj.CoreCompileInputs.cache
+D:\KHS\LogicTest\IronSoftwareCodeChallenge\IronSoftwareCodeChallenge\obj\Debug\net8.0\IronSoftwareCodeChallenge.sourcelink.json
+D:\KHS\LogicTest\IronSoftwareCodeChallenge\IronSoftwareCodeChallenge\obj\Debug\net8.0\IronSoftwareCodeChallenge.dll
+D:\KHS\LogicTest\IronSoftwareCodeChallenge\IronSoftwareCodeChallenge\obj\Debug\net8.0\refint\IronSoftwareCodeChallenge.dll
+D:\KHS\LogicTest\IronSoftwareCodeChallenge\IronSoftwareCodeChallenge\obj\Debug\net8.0\IronSoftwareCodeChallenge.pdb
+D:\KHS\LogicTest\IronSoftwareCodeChallenge\IronSoftwareCodeChallenge\obj\Debug\net8.0\IronSoftwareCodeChallenge.genruntimeconfig.cache
+D:\KHS\LogicTest\IronSoftwareCodeChallenge\IronSoftwareCodeChallenge\obj\Debug\net8.0\ref\IronSoftwareCodeChallenge.dll
